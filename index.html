@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mekano — Commercial Bakery Equipment | Built for Bakers, Made to Perform</title>
+<meta name="description" content="Mekano manufactures commercial bakery equipment in Bahadurgarh, India: spiral mixers, rotary rack ovens, planetary mixers, dough sheeters, deck ovens and full bakery lines. ISO 9001:2015 certified. 12-month warranty.">
+<meta name="theme-color" content="#F26522">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Mekano — Commercial Bakery Equipment">
+<meta property="og:description" content="Spiral mixers, rotary rack ovens, dough sheeters, deck ovens and full bakery lines. Manufactured in Bahadurgarh, India.">
+<meta property="og:image" content="logo_full.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mekanoequipment.com">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ============ TOKENS ============ */
+  :root {
+    --ink: #171718;
+    --text: #2A2A2C;
+    --muted: #6B6B70;
+    --faint: #A0A0A5;
+    --border: #E8E8E5;
+    --border-strong: #D5D5D0;
+    --paper: #FFFFFF;
+    --paper-alt: #F8F8F6;
+    --paper-dark: #F1F1EE;
+    --brand: #F26522;
+    --brand-dark: #D9541A;
+    --brand-tint: #FEF2EC;
+    --green: #16A34A;
+
+    --display: 'Manrope', system-ui, -apple-system, sans-serif;
+    --body: 'Inter', system-ui, -apple-system, sans-serif;
+
+    --pad: clamp(20px, 4vw, 48px);
+    --max: 1200px;
+    --radius: 6px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; height: auto; }
+  button { border: none; background: none; font: inherit; cursor: pointer; color: inherit; }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--pad);
+  }
+
+  /* Common heading style */
+  h1, h2, h3, h4 {
+    font-family: var(--display);
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .eyebrow {
+    font-family: var(--body);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--brand);
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .section-head {
+    max-width: 720px;
+    margin-bottom: 64px;
+  }
+  .section-head h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+  }
+  .section-head p {
+    font-size: 17px;
+    color: var(--muted);
+    line-height: 1.55;
+    max-width: 620px;
+  }
+
+  /* ============ BUTTONS ============ */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 22px;
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    border-radius: var(--radius);
+    transition: all 0.18s ease;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--brand);
+    color: white;
+  }
+  .btn-primary:hover {
+    background: var(--brand-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(242, 101, 34, 0.25);
+  }
+  .btn-secondary {
+    background: var(--ink);
+    color: white;
+  }
+  .btn-secondary:hover {
+    background: #2A2A2C;
+    transform: translateY(-1px);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--border-strong);
+  }
+  .btn-outline:hover {
+    border-color: var(--ink);
+    background: var(--paper-alt);
+  }
+
+  .btn svg { width: 16px; height: 16px; }
+
+  /* ============ NAV ============ */
+  .nav {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+  }
+  .nav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 14px var(--pad);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .nav-logo {
+    height: 40px;
+    display: block;
+  }
+  .nav-logo img { height: 100%; width: auto; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--brand); }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  @media (max-width: 860px) {
+    .nav-links { display: none; }
+    .nav-inner { padding: 12px var(--pad); }
+    .nav-logo { height: 34px; }
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    padding: 80px 0 100px;
+    background: linear-gradient(180deg, var(--paper) 0%, var(--paper-alt) 100%);
+    position: relative;
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 5.4vw, 62px);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.02;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+  .hero h1 .accent { color: var(--brand); }
+  .hero-lead {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--muted);
+    margin-bottom: 40px;
+    max-width: 540px;
+    font-weight: 400;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  .hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .hero-meta-item .k {
+    font-size: 12px;
+    color: var(--faint);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .hero-meta-item .v {
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  /* Hero visual card */
+  .hero-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 36px;
+    box-shadow: 0 4px 40px rgba(23, 23, 24, 0.04);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    height: 4px;
+    width: 60%;
+    background: var(--brand);
+    border-radius: 0 0 4px 0;
+  }
+  .hero-card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--brand-tint);
+    color: var(--brand-dark);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .hero-card-badge::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--brand);
+    border-radius: 50%;
+  }
+  .hero-card h3 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 6px;
+  }
+  .hero-card .sub {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+  .hero-card-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .hero-card-specs .row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .hero-card-specs .k {
+    font-size: 12px;
+    color: var(--faint);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .hero-card-specs .v {
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media (max-width: 900px) {
+    .hero { padding: 48px 0 64px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+    .hero-card { padding: 28px; }
+    .hero-card h3 { font-size: 26px; }
+  }
+
+  /* ============ TRUST BAR ============ */
+  .trust-bar {
+    background: var(--ink);
+    color: white;
+    padding: 24px 0;
+  }
+  .trust-bar-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 40px;
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--pad);
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+  }
+  .trust-item svg {
+    width: 18px;
+    height: 18px;
+    color: var(--brand);
+    flex-shrink: 0;
+  }
+
+  /* ============ RANGE ============ */
+  .range {
+    padding: 100px 0;
+    background: var(--paper);
+  }
+  .range-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .range-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 28px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  .range-card:hover {
+    border-color: var(--ink);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(23, 23, 24, 0.06);
+  }
+  .range-card .icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--brand-tint);
+    color: var(--brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: background 0.2s;
+  }
+  .range-card:hover .icon {
+    background: var(--brand);
+    color: white;
+  }
+  .range-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .range-card p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .range-card .link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.15s;
+  }
+  .range-card:hover .link { color: var(--brand); }
+
+  @media (max-width: 900px) {
+    .range-grid { grid-template-columns: repeat(2, 1fr); }
+    .range { padding: 64px 0; }
+  }
+  @media (max-width: 560px) {
+    .range-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ============ MACHINES TABLE ============ */
+  .machines {
+    padding: 100px 0;
+    background: var(--paper-alt);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .machines-list {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .machine-row {
+    display: grid;
+    grid-template-columns: 1.4fr 2.4fr auto;
+    gap: 32px;
+    padding: 28px 32px;
+    border-bottom: 1px solid var(--border);
+    align-items: center;
+    transition: background 0.15s;
+  }
+  .machine-row:last-child { border-bottom: none; }
+  .machine-row:hover { background: var(--paper-alt); }
+
+  .machine-name {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .machine-name h4 {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+  .machine-name .model {
+    font-size: 12px;
+    color: var(--brand);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .machine-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 36px;
+  }
+  .machine-specs > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 80px;
+  }
+  .machine-specs .k {
+    font-size: 11px;
+    color: var(--faint);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .machine-specs .v {
+    font-family: var(--display);
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 16px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+
+  .machine-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 16px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .machine-cta a:hover {
+    border-color: var(--brand);
+    color: var(--brand);
+  }
+
+  @media (max-width: 900px) {
+    .machines { padding: 64px 0; }
+    .machine-row {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 24px;
+    }
+    .machine-specs { gap: 16px 24px; }
+    .machine-cta a { justify-content: center; width: 100%; }
+  }
+
+  /* ============ WHY / CREDENTIALS ============ */
+  .why {
+    padding: 100px 0;
+    background: var(--paper);
+  }
+  .why-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .why-copy h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 24px;
+  }
+  .why-copy > p {
+    font-size: 17px;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+
+  .why-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .why-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .why-item .check {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--brand-tint);
+    color: var(--brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .why-item .check svg { width: 12px; height: 12px; }
+  .why-item p { font-size: 15px; color: var(--text); line-height: 1.5; }
+  .why-item strong { color: var(--ink); font-weight: 600; }
+
+  .credentials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .cred-card {
+    background: var(--paper-alt);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .cred-card .k {
+    font-size: 11px;
+    color: var(--faint);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .cred-card .v {
+    font-family: var(--display);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 900px) {
+    .why { padding: 64px 0; }
+    .why-inner { grid-template-columns: 1fr; gap: 48px; }
+  }
+
+  /* ============ CLIENTS ============ */
+  .clients {
+    padding: 80px 0;
+    background: var(--paper-alt);
+    border-top: 1px solid var(--border);
+  }
+  .clients-head {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .clients-head h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: -0.01em;
+  }
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .client-cell {
+    background: var(--paper);
+    padding: 20px 12px;
+    text-align: center;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 72px;
+    letter-spacing: -0.005em;
+  }
+
+  @media (max-width: 900px) {
+    .clients-grid { grid-template-columns: repeat(4, 1fr); }
+    .clients { padding: 56px 0; }
+  }
+  @media (max-width: 560px) {
+    .clients-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* ============ CONTACT ============ */
+  .contact {
+    padding: 100px 0;
+    background: var(--paper);
+  }
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .contact-copy h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    margin-bottom: 20px;
+  }
+  .contact-copy > p {
+    font-size: 17px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 460px;
+  }
+  .contact-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .contact-details {
+    background: var(--paper-alt);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 8px 24px;
+  }
+  .detail-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: baseline;
+  }
+  .detail-row:last-child { border-bottom: none; }
+  .detail-row .k {
+    font-size: 12px;
+    color: var(--faint);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .detail-row .v {
+    font-family: var(--display);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+  .detail-row .v a { transition: color 0.15s; }
+  .detail-row .v a:hover { color: var(--brand); }
+  .detail-row .v small {
+    display: block;
+    font-family: var(--body);
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+    margin-top: 3px;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  @media (max-width: 900px) {
+    .contact { padding: 64px 0; }
+    .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .detail-row { grid-template-columns: 90px 1fr; gap: 16px; }
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.7);
+    padding: 56px var(--pad) 32px;
+    font-size: 13px;
+  }
+  .footer-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 24px;
+  }
+  .footer-brand img {
+    height: 40px;
+    filter: brightness(0) invert(1);
+    opacity: 0.95;
+    margin-bottom: 16px;
+  }
+  .footer-brand p {
+    max-width: 320px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.6);
+  }
+  .footer-col h5 {
+    font-family: var(--display);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    letter-spacing: 0.02em;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 8px; }
+  .footer-col a {
+    color: rgba(255,255,255,0.65);
+    transition: color 0.15s;
+  }
+  .footer-col a:hover { color: white; }
+  .footer-bottom {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    color: rgba(255,255,255,0.5);
+    font-size: 12px;
+  }
+
+  @media (max-width: 780px) {
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+
+  /* ============ REVEAL ============ */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo" aria-label="Mekano home">
+      <img src="logo_full.png" alt="Mekano" />
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#range">Range</a>
+      <a href="#machines">Machines</a>
+      <a href="#why">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://wa.me/919114100034" class="btn btn-primary" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow">Manufactured in India · Est. 2012</span>
+        <h1>Commercial bakery equipment, engineered to <span class="accent">last the shift.</span></h1>
+        <p class="hero-lead">
+          Spiral mixers, rotary rack ovens, sheeters, slicers and full bakery lines &mdash; built at our Bahadurgarh factory and shipped direct to over sixty premium bakeries across India.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/919114100034?text=Hi%20Mekano%2C%20I%27d%20like%20a%20quote%20for%3A%20" target="_blank" rel="noopener">
+            Request a quote
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-outline" href="#range">Explore the range</a>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="k">Since</span>
+            <span class="v">2012</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="k">Warranty</span>
+            <span class="v">12 months</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="k">Bakeries served</span>
+            <span class="v">60+</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="k">Installation</span>
+            <span class="v">Included</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured spec card -->
+      <aside class="hero-card reveal" aria-label="Flagship machine">
+        <div class="hero-card-badge">Flagship</div>
+        <h3>Spiral Mixer</h3>
+        <p class="sub">Model ABSM-90 · Heavy-duty dough mixer</p>
+        <div class="hero-card-specs">
+          <div class="row"><span class="k">Flour capacity</span><span class="v">90 kg</span></div>
+          <div class="row"><span class="k">Dough capacity</span><span class="v">144 kg</span></div>
+          <div class="row"><span class="k">Spiral motor</span><span class="v">10 HP</span></div>
+          <div class="row"><span class="k">Bowl motor</span><span class="v">3 HP</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST BAR ============ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      ISO 9001:2015 Certified
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18"/></svg>
+      MSME Registered
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg>
+      DGFT IEC Registered
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      Free installation &amp; 3 service visits
+    </div>
+  </div>
+</div>
+
+<!-- ============ RANGE ============ -->
+<section class="range" id="range">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our range</span>
+      <h2>Every machine your bakery needs, from one factory.</h2>
+      <p>Nine categories, over sixty configurations. Every unit is fabricated in-house, tested before dispatch and installed by our own team.</p>
+    </div>
+
+    <div class="range-grid">
+      <div class="range-card reveal">
+        <div class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <h3>Spiral Mixers</h3>
+        <p>Dual-speed spiral with reverse-rotating bowl. 25 kg to 90 kg flour capacity.</p>
+        <a class="link" href="#contact">Request specs →</a>
+      </div>
+
+      <div class="range-card reveal">
+        <div class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        </div>
+        <h3>Rotary Rack Ovens</h3>
+        <p>Full stainless-steel body with inbuilt steam. 24 to 160 tray capacity.</p>
+        <a class="link" href="#contact">Request specs →</a>
+      </div>
+
+      <div class="range-card reveal">
+        <div class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Planetary Mixers</h3>
+        <p>Hardened alloy gears, multi-speed. 10 L to 160 L for cakes and cookies.</p>
+        <a class="link" href="#contact">Request specs →</a>
+      </div>
+
+      <div class="range-card reveal">
+        <div class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="4" rx="1"/><rect x="3" y="14" width="18" height="4" rx="1"/></svg>
+        </div>
+        <h3>Deck Ovens</h3>
+        <p>Gas and electric variants. Independent top and bottom temperature zones.</p>
+        <a class="link" href="#contact">Request specs →</a>
+      </div>
+
+      <div class="range-card reveal">
+        <div class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M6 8l-3 4 3 4M18 8l3 4-3 4"/></svg>
+        </div>
+        <h3>Dough Sheeters</h3>
+        <p>Table-top and floor models. 1 mm to 40 mm roller gap for pastry and croissant.</p>
+        <a class="link" href="#contact">Request specs →</a>
+      </div>
+
+      <div class="range-card reveal">
+        <div class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4zM8 6v12M12 6v12M16 6v12"/></svg>
+        </div>
+        <h3>Bread &amp; Toast Slicers</h3>
+        <p>Table-top to high-speed lines. Up to 1800 loaves per hour, 9/12 mm slice.</p>
+        <a class="link" href="#contact">Request specs →</a>
+      </div>
+
+      <div class="range-card reveal">
+        <div class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2a4 4 0 018 0v4H8V2zM6 6h12v14a2 2 0 01-2 2H8a2 2 0 01-2-2V6z"/></svg>
+        </div>
+        <h3>Proofing Chambers</h3>
+        <p>Digital humidity control, single and double-door. Consistent, faster rise.</p>
+        <a class="link" href="#contact">Request specs →</a>
+      </div>
+
+      <div class="range-card reveal">
+        <div class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="18" cy="12" r="2"/></svg>
+        </div>
+        <h3>Cookie Drop Machines</h3>
+        <p>5 to 12 nozzles, touch-screen control. 90 to 300 kg per hour output.</p>
+        <a class="link" href="#contact">Request specs →</a>
+      </div>
+
+      <div class="range-card reveal">
+        <div class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Dough Dividers</h3>
+        <p>30 to 120 g per piece. Divider and rounder combinations available.</p>
+        <a class="link" href="#contact">Request specs →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MACHINES TABLE ============ -->
+<section class="machines" id="machines">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Featured models</span>
+      <h2>Selected machines with the numbers that matter.</h2>
+      <p>Six of our most-requested configurations. Every model available with custom voltage, tray size and finish options.</p>
+    </div>
+
+    <div class="machines-list reveal">
+      <div class="machine-row">
+        <div class="machine-name">
+          <span class="model">ABSM-90</span>
+          <h4>Spiral Mixer</h4>
+        </div>
+        <div class="machine-specs">
+          <div><span class="k">Flour</span><span class="v">90 kg</span></div>
+          <div><span class="k">Dough</span><span class="v">144 kg</span></div>
+          <div><span class="k">Spiral</span><span class="v">10 HP</span></div>
+          <div><span class="k">Bowl</span><span class="v">3 HP</span></div>
+        </div>
+        <div class="machine-cta"><a href="https://wa.me/919114100034?text=Hi%2C%20I%27d%20like%20details%20on%20the%20Spiral%20Mixer%20ABSM-90." target="_blank" rel="noopener">Enquire</a></div>
+      </div>
+
+      <div class="machine-row">
+        <div class="machine-name">
+          <span class="model">42-TRAY</span>
+          <h4>Rotary Rack Oven</h4>
+        </div>
+        <div class="machine-specs">
+          <div><span class="k">Trays</span><span class="v">42</span></div>
+          <div><span class="k">Bread/batch</span><span class="v">144 pcs</span></div>
+          <div><span class="k">Cookies/batch</span><span class="v">16 kg</span></div>
+          <div><span class="k">Power</span><span class="v">1.75 HP</span></div>
+        </div>
+        <div class="machine-cta"><a href="https://wa.me/919114100034?text=Hi%2C%20I%27d%20like%20details%20on%20the%2042-Tray%20Rotary%20Rack%20Oven." target="_blank" rel="noopener">Enquire</a></div>
+      </div>
+
+      <div class="machine-row">
+        <div class="machine-name">
+          <span class="model">P-80</span>
+          <h4>Planetary Mixer</h4>
+        </div>
+        <div class="machine-specs">
+          <div><span class="k">Volume</span><span class="v">80 L</span></div>
+          <div><span class="k">Batter</span><span class="v">32 kg</span></div>
+          <div><span class="k">Power</span><span class="v">5.5 HP</span></div>
+          <div><span class="k">Speeds</span><span class="v">Multi</span></div>
+        </div>
+        <div class="machine-cta"><a href="https://wa.me/919114100034?text=Hi%2C%20I%27d%20like%20details%20on%20the%20Planetary%20Mixer%20P-80." target="_blank" rel="noopener">Enquire</a></div>
+      </div>
+
+      <div class="machine-row">
+        <div class="machine-name">
+          <span class="model">DS-650</span>
+          <h4>Dough Sheeter</h4>
+        </div>
+        <div class="machine-specs">
+          <div><span class="k">Belt width</span><span class="v">650 mm</span></div>
+          <div><span class="k">Roller gap</span><span class="v">1&ndash;40 mm</span></div>
+          <div><span class="k">Power</span><span class="v">1.1 kW</span></div>
+          <div><span class="k">Weight</span><span class="v">288 kg</span></div>
+        </div>
+        <div class="machine-cta"><a href="https://wa.me/919114100034?text=Hi%2C%20I%27d%20like%20details%20on%20the%20Dough%20Sheeter%20DS-650." target="_blank" rel="noopener">Enquire</a></div>
+      </div>
+
+      <div class="machine-row">
+        <div class="machine-name">
+          <span class="model">ABCDM-12</span>
+          <h4>Cookie Drop Machine</h4>
+        </div>
+        <div class="machine-specs">
+          <div><span class="k">Nozzles</span><span class="v">12</span></div>
+          <div><span class="k">Tray width</span><span class="v">800 mm</span></div>
+          <div><span class="k">Output</span><span class="v">300 kg/hr</span></div>
+          <div><span class="k">Power</span><span class="v">5.2 HP</span></div>
+        </div>
+        <div class="machine-cta"><a href="https://wa.me/919114100034?text=Hi%2C%20I%27d%20like%20details%20on%20the%20Cookie%20Drop%20Machine%20ABCDM-12." target="_blank" rel="noopener">Enquire</a></div>
+      </div>
+
+      <div class="machine-row">
+        <div class="machine-name">
+          <span class="model">ABHSS-1800</span>
+          <h4>High-Speed Bread Slicer</h4>
+        </div>
+        <div class="machine-specs">
+          <div><span class="k">Output</span><span class="v">1800 loaves/hr</span></div>
+          <div><span class="k">Slice</span><span class="v">9/12 mm</span></div>
+          <div><span class="k">Power</span><span class="v">4.0 HP</span></div>
+          <div><span class="k">Weight</span><span class="v">250 kg</span></div>
+        </div>
+        <div class="machine-cta"><a href="https://wa.me/919114100034?text=Hi%2C%20I%27d%20like%20details%20on%20the%20High-Speed%20Bread%20Slicer%20ABHSS-1800." target="_blank" rel="noopener">Enquire</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY / CREDENTIALS ============ -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="why-inner">
+      <div class="why-copy">
+        <span class="eyebrow">Why Mekano</span>
+        <h2>Fourteen years of factory-floor learning.</h2>
+        <p>Mekano is built on the foundation of Aroma Bake Equipments &mdash; a manufacturing partnership serving bakeries across India since 2012. Every machine is fabricated in-house at our Bahadurgarh plant.</p>
+        <p>We weld the metal hard so your baking stays easy. From a two-tray deck oven to a 160-tray rotary rack, everything ships with a 12-month manufacturing warranty and installation included.</p>
+
+        <div class="why-list">
+          <div class="why-item">
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <p><strong>Manufactured in India.</strong> Every machine fabricated in Bahadurgarh, Haryana. No re-badged imports.</p>
+          </div>
+          <div class="why-item">
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <p><strong>12-month warranty on every unit.</strong> Repair or replacement of defective parts, direct from our service centre.</p>
+          </div>
+          <div class="why-item">
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <p><strong>Installation &amp; 3 service visits free.</strong> Our team travels to your bakery to install, calibrate and train.</p>
+          </div>
+          <div class="why-item">
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <p><strong>Direct-to-buyer pricing.</strong> No distributors, no markup. You talk to the factory.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="credentials">
+          <div class="cred-card">
+            <div class="k">Established</div>
+            <div class="v">2012</div>
+          </div>
+          <div class="cred-card">
+            <div class="k">Quality</div>
+            <div class="v">ISO 9001:2015</div>
+          </div>
+          <div class="cred-card">
+            <div class="k">MSME</div>
+            <div class="v">UDYAM-HR-07-0003156</div>
+          </div>
+          <div class="cred-card">
+            <div class="k">GST</div>
+            <div class="v">06ALYPM2565P1Z3</div>
+          </div>
+          <div class="cred-card">
+            <div class="k">Export licence</div>
+            <div class="v">IEC 0515006807</div>
+          </div>
+          <div class="cred-card">
+            <div class="k">Warranty</div>
+            <div class="v">12 months</div>
+          </div>
+          <div class="cred-card">
+            <div class="k">Installation</div>
+            <div class="v">Included</div>
+          </div>
+          <div class="cred-card">
+            <div class="k">Free service visits</div>
+            <div class="v">3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLIENTS ============ -->
+<section class="clients">
+  <div class="wrap">
+    <div class="clients-head">
+      <h3>Trusted on production floors across India</h3>
+    </div>
+    <div class="clients-grid reveal">
+      <div class="client-cell">Good Day</div>
+      <div class="client-cell">Guruji Cookies</div>
+      <div class="client-cell">Paris Bakery</div>
+      <div class="client-cell">Mr. Brown</div>
+      <div class="client-cell">Angan</div>
+      <div class="client-cell">Gulab</div>
+      <div class="client-cell">Bake Factory</div>
+      <div class="client-cell">Arora Pastry</div>
+      <div class="client-cell">Sri Radhey</div>
+      <div class="client-cell">Cakes &amp; Bakes</div>
+      <div class="client-cell">Brew Bakes</div>
+      <div class="client-cell">Cake Duckss</div>
+      <div class="client-cell">Chef Khan</div>
+      <div class="client-cell">Little Bunny</div>
+      <div class="client-cell">Briosca</div>
+      <div class="client-cell">Rajshree</div>
+      <div class="client-cell">Texas Bakers</div>
+      <div class="client-cell">Jaggi Sweets</div>
+      <div class="client-cell">Ludhiana Wala</div>
+      <div class="client-cell">Mahapadam</div>
+      <div class="client-cell">Nutraj</div>
+      <div class="client-cell">Dawat-e-Khas</div>
+      <div class="client-cell">Mango Masala</div>
+      <div class="client-cell">Maruti Bakers</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="contact-copy">
+        <span class="eyebrow">Get in touch</span>
+        <h2>Talk to the factory directly.</h2>
+        <p>Send us a WhatsApp with what you're building &mdash; a new bakery, a production upgrade, a single machine replacement &mdash; and we'll come back with a spec, a price and a delivery timeline.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="https://wa.me/919114100034?text=Hi%20Mekano%2C%20I%27d%20like%20a%20quote%20for%3A%20" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            WhatsApp
+          </a>
+          <a class="btn btn-outline" href="tel:+919114100034">Call +91 91141 00034</a>
+        </div>
+      </div>
+
+      <div class="contact-details">
+        <div class="detail-row">
+          <span class="k">Contact</span>
+          <span class="v">Manoj Kumar<small>Managing Partner</small></span>
+        </div>
+        <div class="detail-row">
+          <span class="k">Phone</span>
+          <span class="v"><a href="tel:+919114100034">+91 91141 00034</a></span>
+        </div>
+        <div class="detail-row">
+          <span class="k">WhatsApp</span>
+          <span class="v"><a href="https://wa.me/919114100034" target="_blank" rel="noopener">+91 91141 00034</a></span>
+        </div>
+        <div class="detail-row">
+          <span class="k">Email</span>
+          <span class="v"><a href="mailto:info@mekanoequipment.com">info@mekanoequipment.com</a></span>
+        </div>
+        <div class="detail-row">
+          <span class="k">Instagram</span>
+          <span class="v"><a href="https://instagram.com/mekanoequipment" target="_blank" rel="noopener">@mekanoequipment</a></span>
+        </div>
+        <div class="detail-row">
+          <span class="k">Factory</span>
+          <span class="v">
+            Plot No. 141, Udyog Vihar<br>
+            Sankhol, Bahadurgarh<br>
+            Jhajjar, Haryana &mdash; 124507
+            <small>Nearest metro station: Nawada</small>
+          </span>
+        </div>
+        <div class="detail-row">
+          <span class="k">Hours</span>
+          <span class="v">Monday to Saturday<small>9:00 AM &ndash; 7:00 PM IST</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo_full.png" alt="Mekano">
+      <p>Commercial bakery equipment manufactured in Bahadurgarh, Haryana &mdash; a partnership with Aroma Bake Equipments.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Range</h5>
+      <ul>
+        <li><a href="#range">Spiral Mixers</a></li>
+        <li><a href="#range">Rotary Rack Ovens</a></li>
+        <li><a href="#range">Planetary Mixers</a></li>
+        <li><a href="#range">Dough Sheeters</a></li>
+        <li><a href="#range">Deck Ovens</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#why">About</a></li>
+        <li><a href="#machines">Machines</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://instagram.com/mekanoequipment" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Reach us</h5>
+      <ul>
+        <li><a href="tel:+919114100034">+91 91141 00034</a></li>
+        <li><a href="mailto:info@mekanoequipment.com">info@mekanoequipment.com</a></li>
+        <li><a href="https://wa.me/919114100034" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Mekano Equipment. All rights reserved.</span>
+    <span>Built for Bakers, Made to Perform.</span>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
